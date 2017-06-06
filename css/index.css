@@ -1,3 +1,7 @@
 h1{
 	text-align: center;
 }
+marquee{
+	margin: 0 auto;
+	display: block;
+}
