@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+
+		.box{
+			background-color: yellow;
+			margin-bottom: 20px;
+			border: 2px solid red;
+		}
+		.left{
+			width: 30%;
+			height: 100px;
+			background-color: #ccc;
+			float: left;
+		}
+		.right{
+			width: 70%;
+			height: 100px;
+			background-color: lightseagreen;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>问题一：父元素失去高度</h1>
+	<p>解决方法：用clearfix解决</p>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>

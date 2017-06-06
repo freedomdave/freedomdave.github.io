@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .bigbox{
+  width: 250px;height: 250px;
+  position: relative;
+  background-color: #999;
+  margin: 5% auto;transition: all 3s;
+}
+.bigbox:hover{
+  border-radius:50% 50% 0 0;
+}
+.box{
+  position: relative;
+  position: absolute;
+  top: 25px;left: 25px;
+  width: 200px;height: 200px;
+  background-color: lightpink;
+  transition: all 3s;
+}
+.ball{
+  position: absolute;
+  top: 10px;left: 10px;
+  width: 50px;height: 50px;
+  background-color: seagreen;
+  border-radius: 50%;
+  transition: all 3s;
+}
+.box:hover {
+  border-radius:50% 50% 0 0;
+  top: 50px;
+  background-color: yellow;
+  
+}
+.box:hover .ball{
+  top: 50px;left: 50px;
+  width: 100px;height: 100px;
+  background-color: purple;
+  
+}
+  </style>
+</head>
+<body>
+  <div class="bigbox">
+  <div class="box">
+    <div class="ball"></div>
+  </div>
+</div>
+</body>
+</html>

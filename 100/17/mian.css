@@ -1,0 +1,28 @@
+.first, .second {
+	line-height: 100px;
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.first {
+	background-color: teal;
+	height: 100px;
+}
+@media (min-width: 700px){
+	.first {
+		width: 50%;
+		float: left;
+	}
+}
+.second {
+	background-color: pink;
+	height: 100px;
+}
+@media (min-width: 700px){
+	.second {
+		width: 50%;
+		float: left;
+		background-color: seagreen;
+	}
+}

@@ -1,0 +1,50 @@
+/*
+
+.dark-primary-color    { background: #388E3C; }
+.default-primary-color { background: #4CAF50; }
+.light-primary-color   { background: #C8E6C9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FF4081; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }*/
+
+
+header  {
+	background-color: #4CAF50;
+	height: 100px;
+	width: 80%;
+	margin: 0 auto;
+}
+.logo  {
+	color: #FF4081;
+}
+
+.hero  {
+	width: 20%;
+	margin: 20px auto;
+	height: 30px;
+	background-color: #FF4081;
+}
+.first {
+	background-color:#4CAF50; 
+	width: 80%;
+	margin: 0 auto;
+	height: 100px;
+}
+.second {
+	background-color:#C8E6C9; 
+	width: 80%;
+	margin: 0 auto;
+	height: 100px;
+}
+footer  {
+	background-color: #388E3C;
+	width: 80%;
+	margin: 0 auto;
+	height: 50px;
+	color: #212121;
+}
+footer a  {
+	color: #FF4081;
+}

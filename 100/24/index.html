@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>try move</title>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<style>
+		h1, p {
+			text-align: center;
+		}
+		.box {
+		  width: 100px;
+		  height: 100px;
+		  background-color: teal;
+		  border-radius: 50%;
+		  transition: all 1.5s 0.1s;
+		}
+		.box.circle {
+		  transform:translate(50px,150px)  scale(2,4);
+		  /*   border-radius: 50%; */
+		  border-radius: 0%;
+		}
+		.box p {
+			display: none;
+		}
+		.box p.nav{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>transform与jQuery结合应用</h1>
+	<p>transform控制这个元素怎样运动，<br>jQuery是元素运动前后的条件,即鼠标单击（click)</p>
+	<div class="box">
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+	</div>
+
+
+	<script>
+		$('.box').click(function(){
+		  $(this).toggleClass('circle');
+		  $('.box p').toggleClass('nav')
+		})
+
+	</script>
+</body>
+</html>

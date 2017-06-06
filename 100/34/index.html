@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VAR INDEX</title>
+	<style>
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+    	ul{
+    		list-style: none;
+    	}
+    	li{
+    		width: 50px;
+    		line-height: 20px;
+    		text-align: center;
+    		float: left;
+    		border: 1px solid red;
+    		cursor: pointer;
+    		margin: 10px 10px;
+    	}
+		.color{
+			background-color: teal;
+		}
+		img{
+			display: block;
+			width: 300px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<img src="../32/images/banner1.gif" alt="" class="pic clearfix">
+	<ul>
+		<li >1</li>
+		<li >2</li>
+		<li >3</li>
+		<li >4</li>
+	</ul>
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<!-- <script type="text/javascript" src="../32/jquery-1.11.1.js"></script> -->
+	<script type="text/javascript">
+		$("ul li").click(function(){
+			var index = $(this).index();
+			// 设置变量，index的意思是对当前选择器选择的
+			// // 同级元素的索引，即对其进行排序，默认第一个是0，向后排列
+			
+			var src = "../32/images/banner"+(index+1)+".gif"; 
+			// 设置变量 SRC并定义其名字为为几个字符串相连
+			$(".pic").attr("src",src);
+			// 选择变化的元素，其属性元素为src，并发生所设置的变量的变化
+			$(this).addClass("color");
+			// 给当前选择的元素增加CLASS=color
+			$(this).siblings().removeClass("color");
+			// 去掉当前其他同级元素，并去掉其他同级元素的CLASS=color
+
+		})
+	</script>
+</body>
+</html>

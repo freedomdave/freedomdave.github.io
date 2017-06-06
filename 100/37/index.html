@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+		.box{
+			float: left;
+			width: 200px;
+			text-align: center;	
+			border: 1px solid red;		
+		}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style: none;
+			display: none;
+		}
+
+		li{
+			width: 200px;
+			line-height: 20px;
+			background-color: teal;	
+		}
+		nav{
+			margin: 10px auto;
+			width: 900px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="clearfix">
+		<div class="box clearfix">
+			<a href="">测试</a>	
+			<ul class="clearfix ">
+				<li>第一页</li>
+				<li>第二页</li>
+				<li>第三页</li>
+			</ul>
+	</div>
+		<div class="box clearfix">
+			<a href="">测试</a>
+			<ul class="clearfix">
+				<li>第一页</li>
+				<li>第二页</li>
+				<li>第三页</li>
+			</ul>
+		</div>
+		<div class="box clearfix">
+			<a href="">测试</a>
+			<ul class="clearfix ">
+				<li>第一页</li>
+				<li>第二页</li>
+				<li>第三页</li>
+			</ul>
+		</div>
+	</nav>
+
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<script>
+		$(".box").mouseenter(function(){
+			$(this).find("ul").stop().slideDown(500);
+
+		});
+		$(".box").mouseleave(function(){
+			$(this).find("ul").stop().slideUp(1000);
+		});
+		// $(".box>a").mouseenter(function(){
+		// 	$(this).parent().find("ul").stop().slideDown(500);
+
+		// });
+		// $(".box").mouseleave(function(){
+		// 	$(this).find("ul").stop().slideUp(1000);
+		// });
+
+
+
+	</script>
+</body>
+</html>

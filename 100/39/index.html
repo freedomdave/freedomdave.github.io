@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom树状结构添加元素</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<input type="text" class="txt">
+	<input type="button" value="下添加元素" class="btndown">
+	<input type="button" value="上添加元素" class="btnup">
+	<ul>
+		<li>苹果</li>
+		<li>香蕉</li>
+		<li>香蕉</li>
+		<li>香蕉</li>
+	</ul>
+
+	<script src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".btndown").click(function(){
+			var val=$(".txt").val();声明变量 val的值为class名为txt的元素的value值
+			$("ul").append("<li>"+val+"</li>");
+		});
+		$('.btnup').click(function(){
+			var val=$(".txt").val();
+			$("ul").prepend("<li>"+val+"</li>");
+		});
+	</script>
+</body>
+</html>

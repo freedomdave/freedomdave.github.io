@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>responsive</title>
+	<style>
+		.nav-btn {
+			width: 100px;
+			height: 50px;
+			background-color: #daba55;
+			float: right;
+			display: none;
+
+		}
+		.hamburger-btn {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: deeppink;
+		}
+		h1 {
+			width: 80%;
+			margin: 20px auto;
+			text-align: center;
+		}
+		p {
+			width: 80%;
+			line-height: 1.5em;
+			opacity: .8;
+			margin: 5px auto;
+		}
+		@media (min-width: 500px){
+			.nav-btn {
+							display: block;
+			}
+			.hamburger-btn {
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>display:none和display:block的应用</h1>
+	<p>现今，我们大多数用移动端来浏览网页，而我们移动端浏览器宽度与桌面端浏览器宽度有很大的不同，这就需要我们给客户营造完全不一样的用户体验，为了页面布局更美观，我们采用这两种样式来实现不同的用户体验。</p>
+	<div class="nav-btn"></div>
+	<div class="hamburger-btn"></div>
+</body>
+</html>

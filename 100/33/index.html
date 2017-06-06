@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<style>
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+			img{
+				display: block;
+			}
+			ul{
+				list-style: none;
+				/*background-color: teal;*/
+			}
+			li{
+				float: left;
+				width: 50px;
+				/*background-color: teal;*/
+				text-align: center;
+				margin-left: 20px;
+				background-color: teal;
+\
+			}
+	</style>
+</head>
+<body>
+	
+		<img class="pic" src="images/1_05.gif" alt="">
+<!-- 		<div class="box">
+		<input type="button" value="1" class="btn1">
+		<input type="button" value="2" class="btn2">
+		<input type="button" value="3" class="btn3">
+		<input type="button" value="4" class="btn4">
+		</div> -->
+		<ul class="clearfix">
+			<li class="btn1">1</li>
+			<li class="btn2">2</li>
+			<li class="btn3">3</li>
+			<li class="btn4">4</li>
+		</ul>
+
+
+
+
+
+
+		<script type="text/javascript">
+			$(".btn1").click(function () {
+				$(".pic").attr("src","images/1_05.gif");
+
+				$(".btn1").css("background-color","red");
+				$(".btn2").css("background-color","teal");
+				$(".btn3").css("background-color","teal");
+				$(".btn4").css("background-color","teal");
+			});
+			$(".btn2").click(function () {
+				$(".pic").attr("src","images/1_06.gif");
+
+				$(".btn2").css("background-color","red");
+				$(".btn1").css("background-color","teal");
+				$(".btn3").css("background-color","teal");
+				$(".btn4").css("background-color","teal");
+				
+			});
+			$(".btn3").click(function () {
+				$(".pic").attr("src","images/1_07.gif");
+
+				$(".btn3").css("background-color","red");
+				$(".btn1").css("background-color","teal");
+				$(".btn2").css("background-color","teal");
+				$(".btn4").css("background-color","teal");
+				
+			});
+			$(".btn4").click(function () {
+				$(".pic").attr("src","images/1_08.gif");
+
+				$(".btn4").css("background-color","red");
+				$(".btn1").css("background-color","teal");
+				$(".btn3").css("background-color","teal");
+				$(".btn2").css("background-color","teal");
+				
+			});
+
+
+
+		</script>
+</body>
+</html>

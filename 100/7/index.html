@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+.clear-fix:before,.clear-fix:after{display: table;content: ""}
+.clear-fix:after{clear: both;}
+.clear-fix{zoom:1;}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+ul li:hover{
+  box-shadow: 0 0 15px 5px #555;
+}
+ul li{
+  margin: 0 auto;
+  transition: all 1s;
+  width:550px;
+   box-shadow: 0 0 5px 2px #555;
+  margin-bottom: 15px;
+}
+ul li .id{
+  float: left;
+  font-size: 30px;
+ margin-right: ;:20px;
+}
+ul li .id a{
+  display: block;
+ text-align: center;
+  width: 50px;
+  background-color: lightblue;
+  line-height: 100px;
+}
+ul li .title a{
+  display: block;
+  width: 550px;
+  line-height: 50px;
+   color: #333;
+  }
+</style>
+<body>
+	<ul>
+  <li>
+    <div class="id clear-fix">
+      <a href="">1</a>
+    </div>
+    <div class="title clear-fix">
+      <a href="">第一个 METEOR 应用 <br />2015年10月10</a>
+    </div>
+  </li>
+  <li>
+    <div class="id clear-fix">
+      <a href="">2</a>
+    </div>
+    <div class="title clear-fix">
+      <a href="">狼人传说<br />2015年10月11号</a>
+    </div>
+  </li>
+    <li>
+    <div class="id clear-fix">
+      <a href="">3</a>
+    </div>
+    <div class="title clear-fix">
+      <a href="">小王子<br />2015年10月13号</a>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

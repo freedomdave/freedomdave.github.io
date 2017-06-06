@@ -1,0 +1,120 @@
+doctype html
+html.no-js(lang='zh-cn')
+  head
+    meta(http-equiv='Content-Type')
+    meta(content='text/html; charset=utf-8')
+    meta(charset='utf-8')
+    title 找的就是我，被埋没是一种罪过
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='email=no')
+    link(rel='stylesheet', type='text/css', href='css/reset.css')
+    link(rel='stylesheet', type='text/css', href='css/index.css')
+    link(rel='stylesheet', type='text/css', href='css/animations.css')
+    link(rel='stylesheet', type='text/css', href='css/load.css')
+  body
+    #loading
+      .spinner
+        .double-bounce1
+        .double-bounce2
+    #content(style='display:none')
+      .page.page-1-1.page-current
+        .wrap
+          img.img_1.pt-page-moveFromTop(src='img/t1-text.png')
+          img.img_2.pt-page-moveCircle(src='img/t1-yuan.png')
+          img.img_3.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-2-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveFromLeft(src='img/t2-3.png')
+          img.img_3.hide.pt-page-moveCircle(src='img/t2-2.png')
+          img.img_6.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-3-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveFromRight(src='img/t3-2.png')
+          img.img_2.hide.pt-page-moveCircle(src='img/t3-1.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-4-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveFromLeft(src='img/t4-1.png')
+          img.img_3.pt-page-moveFromRight.hide(src='img/t4-2.png')
+          img.img_4.pt-page-moveFromBottom.hide(src='img/t4-3.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-5-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveFromBottom(src='img/t5-1.png')
+          img.img_2.pt-page-moveFromLeft.hide(src='img/t5-2.png')
+          img.img_3.pt-page-moveFromLeft.hide(src='img/t5-3.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-6-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveCircle(src='img/t6-1.png')
+          img.img_2.pt-page-moveFromRight.hide(src='img/t6-2.png')
+          img.img_3.pt-page-moveFromLeft.hide(src='img/t6-3.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-7-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveFromTop(src='img/t7-1.png')
+          img.img_2.pt-page-moveCircle.hide(src='img/t7-2.png')
+          img.img_3.pt-page-moveFromLeft.hide(src='img/t7-3.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-8-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveCircle(src='img/t8-1.png')
+          img.img_2.pt-page-moveFromRight.hide(src='img/t8-2.png')
+          img.img_3.pt-page-moveFromBottom.hide(src='img/t8-3.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-9-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveCircle(src='img/t9-1.png')
+          img.img_2.pt-page-moveFromBottom.hide(src='img/t9-2.png')
+          img.img_6.hide.pt-page-moveIconUp(src='img/icon_up.png')
+      .page.page-10-1.hide
+        .wrap
+          img.img_1.hide.pt-page-moveCircle(src='img/t10-1.png')
+          .text
+            h2(style='padding:5px; margin:0px') 联系方式
+            |                         电话：
+            a(href='tel:18033551393') 18033551393
+            | (高洪伟)
+            br
+            |                         邮箱：
+            a(href='mailto:zp-hr@zto.cn') 594144517@qq.com
+            br
+          img.img_3.pt-page-moveFromBottom.hide(onclick='shareDialog()', src='img/t10-3.png')
+          a(href='http://m.zzfriend.com')
+            img#img.img_logo.pt-page-moveFromBottom.hide(src='img/t10-5.png')
+          a(href='#')
+            img#img.img_7.pt-page-moveFromBottom.hide(src='img/t10-4.png')
+    #audiocontainer
+    #textsuper
+      #textsub
+        img#fontimg
+    #share(onclick='closeDialog()')
+      .shareImg
+    script(type='text/javascript').
+      var imgUrl = 'http://www.zzfriend.com/demo/shouji/ztjob/img/job-logo.png';
+      var lineLink = 'http://www.zzfriend.com/demo/shouji/ztjob/?v='+Math.round(Math.random()*999)+3000;
+      var descContent = "让我们一起闯荡江湖，让我们一起创造奇迹！";
+      var shareTitle = '找的就是我，被埋没是一种罪过';
+      var appid = 'wxdb943f961ca9da9d';
+      gSound = 'img/1.mp3';
+    script(src='js/zepto.min.js')
+    script(src='js/touch.js')
+    script(src='js/index.js')
+    script(type='text/javascript').
+      document.onreadystatechange = loading;
+      function loading(){
+      if(document.readyState == "complete")
+      {
+      $("#loading").hide();
+      $("#content").show();
+      playbksound();
+      }
+      }
+      function shareDialog(){
+      $("#share").show();
+      }
+      function closeDialog(){
+      $("#share").hide();
+      }
+  div(style='display:none')

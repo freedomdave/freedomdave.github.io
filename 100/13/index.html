@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}*/
+    	.container{
+    		width: 1000px;
+    		margin: 0 auto;
+    	}
+		.box{
+			width: 500px;
+			height: 100px;
+			padding: 25px;
+			background-color: lightseagreen;
+			margin-bottom: 30px;
+		}
+		.bottom{
+			width: 500px;
+			height: 100px;
+			padding: 25px;
+			background-color: lightseagreen;
+			box-sizing:border-box;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+		<h1>这两个盒子给的初始大小一样，但是具体效果如下</h1>
+		<div class="box clearfix">给盒子加padding、border后盒子会比原设定大</div>
+		<div class="bottom clearfix">加一条属性可以清除这种情况box-sizing:border-box</div>
+</div>
+</body>
+</html>

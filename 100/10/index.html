@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+    	.container{
+    		width: 80%;
+    		margin: 0 auto;
+    	}
+
+		.box{
+			background-color: yellow;
+			margin-bottom: 20px;
+			/*border: 2px solid red;*/
+		}
+		.left{
+			width: 30%;
+			height: 100px;
+			background-color: #ccc;
+			
+			margin-top: 50px;
+		}
+		.box .one{
+			margin-bottom: 50px;
+			margin-top: 0px;
+
+		}
+		/*.right{
+			width: 70%;
+			height: 100px;
+			background-color: lightseagreen;
+			float: left;
+		}*/
+		.first{
+			background-color: red;
+			height: 50px;
+			margin-bottom: 100px;
+		}
+		.second{
+			background-color: green;
+			height: 50px;
+			margin-top: 100px;
+		}
+		.third{
+			background-color: red;
+			height: 50px;
+			margin-bottom: 200px;
+		}
+		.forth{
+			background-color: green;
+			height: 50px;
+			
+		}
+		a{
+			display: block;
+			line-height: 50px;
+			font-size: 30px;
+			width: 30%;
+			margin:0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+			<h1>问题一：子元素与父元素margin重合</h1>
+		
+		<div class="box ">
+			<div class="left "></div>
+			<!-- <div class="right"></div> -->
+		</div>
+		<div class="box ">
+			<div class="left one"></div>
+			<!-- <div class="right"></div> -->
+		</div>
+		<h1>解决方法：给父元素用clearfix解决</h1>
+		<div class="box clearfix">
+			<div class="left"></div>
+			<!-- <div class="right"></div> -->
+		</div>
+		<h1>问题二：两个上下相邻盒子的margin-bottom与margin-top重合</h1>
+		
+		<div class="first ">
+			<!-- <div class="left "></div> -->
+			<!-- <div class="right"></div> -->
+		</div>
+		<div class="second">
+			<!-- <div class="left "></div> -->
+			<!-- <div class="right"></div> -->
+		</div>
+		<h1>解决方法：一般不两个同时设置margin</h1>
+		<div class="third clearfix">
+			<!-- <div class="left "></div> -->
+			<!-- <div class="right"></div> -->
+		</div>
+		<div class="forth clearfix">
+			<!-- <div class="left "></div> -->
+			<!-- <div class="right"></div> -->
+		</div>
+		<a href="http://haoduoshipin.com/v/166">参考资料  #166</a>
+
+	</div>
+	
+</body>
+</html>

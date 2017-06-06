@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sidebar</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+</head>
+<body>
+	<i class="circle icon-reorder"></i>
+	<div class="box"> 
+		<ul>
+			<li>HOME</li>
+			<li>WORK</li>
+			<li>ABOUT</li>
+		</ul>
+	</div>
+	<div class="ui-mask"></div>
+
+
+
+
+	<script>
+
+	    $('.circle').click(function() {
+	      $('.box').addClass('sidebar');
+	      $('.ui-mask').addClass('ui-mask-visible');
+	    });
+	    $('.ui-mask').click(function() {
+	      $('.box').removeClass('sidebar');
+	      $('.ui-mask').removeClass('ui-mask-visible');
+	    });
+  
+	</script>
+</body>
+</html>

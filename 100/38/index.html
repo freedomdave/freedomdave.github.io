@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义动画</title>
+	<style>
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.view{
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			position: relative;
+		}
+		.big-box{
+			width: 400px;
+			height: 100px;
+		}
+		.box{
+			float: left;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+		}		
+		.box2{
+			width: 100px;
+			height: 100px;
+			background-color: #ff0;
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+		}		
+		.box4{
+			width: 100px;
+			height: 100px;
+			background-color: #00f;
+		}
+		.view>ul{
+			list-style: none;
+			position: absolute;
+			left: 10px;
+			top: 80px;
+		}
+
+		.view>ul>li{
+			float: left;
+			border: 1px solid red;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<ul class="clearfix">
+			<li>[1]</li>
+			<li>[2]</li>
+			<li>[3]</li>
+			<li>[4]</li>
+		</ul>
+		<div class="big-box clearfix">
+			<div class="box box1">
+				
+			</div>
+			<div class="box box2">
+				
+			</div>
+			<div class="box box3">
+				
+			</div>
+			<div class="box box4">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".big-box").animate({"margin-left":-300},5000);
+		$("ul li").mouseenter(function(){
+			var index = $(this).index();
+			var marleft = index*(-100);
+			$(".big-box").css({"margin-left":marleft},300);
+		});
+	</script>
+</body>
+</html>

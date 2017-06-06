@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sidebar</title>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<meta name="viewport" content="width=device-width">
+	<style>
+		body {
+			margin: 0;
+		}
+		h1, p{
+			line-height: 1.5em;
+	    	font-family: arial;
+	    	text-align: center;
+	    	padding-bottom: 30px;
+	    }
+		.circle {
+			width: 50px;
+			height: 50px;
+			border-radius: 60%;
+			background-color: 	deeppink;
+			margin: 20px ;
+		}
+		.box {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: teal;
+			width: 240px;
+			opacity: 1;
+			transform: translateX(-240px);
+			transition: all .5s 0.1s;	
+		}
+		.box.sidebar {
+			transform: translateX(0px);			
+		}
+		.ui-mask {
+		    background-color: rgba(0,0,0,0.5);
+		    height: 100%;
+		    left: 0;
+		    opacity: 0.1;
+		    top: 0;
+		    visibility: hidden;
+		    width: 100%;
+		   /* z-index: 3;*/
+		    position: fixed;
+		    /*transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);*/
+		    transform: translateZ(0);
+		}
+		.ui-mask.ui-mask-visible {
+		    opacity: 1;
+		    visibility: visible;
+		    transition-delay: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>导航栏的显示与隐藏</h1>
+	<p>参照happypeter制作的网页<a href="http://qd.haoduoshipin.com/">http://qd.haoduoshipin.com</a></p>
+	<div class="circle"></div>
+	<div class="box"> </div>
+	<div class="ui-mask"></div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero corporis vel esse sunt architecto. Expedita, quidem excepturi deserunt suscipit facere optio, consequatur voluptates voluptas ab repudiandae. Ipsum veritatis voluptates accusantium libero ipsa odit, amet laudantium. Minima delectus facere eaque rerum voluptatem harum sit velit autem numquam, aut esse officiis quis, magnam natus! Eveniet sequi distinctio fugiat. Quam voluptate laboriosam tenetur. Asperiores minima aut quas aliquam sed ab, culpa odit adipisci nam obcaecati accusamus velit fugit deserunt ratione error, nesciunt provident laboriosam autem, iste possimus. Itaque similique libero beatae iste odio, facere, commodi tempora laboriosam necessitatibus eum error quas? Modi amet cum repellendus voluptate quam ea voluptates, recusandae vero expedita autem illo laudantium, consectetur beatae atque quas sapiente culpa possimus exercitationem ipsum laborum reprehenderit deserunt, mollitia itaque sed aliquam. Amet atque ullam, facilis dolores quibusdam minima. Quas maiores sunt mollitia aperiam distinctio, blanditiis fuga quasi illum laudantium beatae sint veniam rerum ipsum vitae, tenetur, molestiae incidunt minima est quam ullam suscipit rem deleniti! Odio impedit cupiditate, iste fugit accusantium, reiciendis assumenda laborum deserunt adipisci, aperiam illum velit perferendis dicta provident optio amet neque ipsam quod molestias non recusandae. Velit eos ut nobis ab sunt et veritatis earum excepturi optio eius ipsam rerum magnam illo architecto eaque nisi at, est, dolores cumque nulla qui aperiam? Incidunt adipisci delectus temporibus dolorum, voluptatum nesciunt nulla fugiat culpa illum reprehenderit, perferendis! Quis cumque at sit rerum distinctio molestiae, cum hic quod nihil a vel nemo quaerat dicta maxime neque pariatur error cupiditate necessitatibus, nulla quos minima officia consequatur porro quo. Vel veniam aspernatur veritatis quia quis corporis odit facilis? Eveniet nemo reiciendis quo vitae, libero repudiandae perspiciatis velit mollitia eos, architecto neque, delectus! Soluta aspernatur pariatur nihil nobis, voluptas eligendi blanditiis temporibus autem, iusto amet molestiae consequuntur quaerat, maxime omnis? Vel sunt, est placeat veritatis et distinctio reprehenderit molestias quia soluta vero libero quae modi culpa maiores? Quaerat, veniam fuga quos, necessitatibus aliquid aspernatur explicabo mollitia in accusamus vero vel minima asperiores, eos distinctio commodi cumque. Corporis sapiente aspernatur aliquam nihil? Eveniet pariatur, suscipit laboriosam ex corrupti ipsa nobis fugit porro eum aperiam architecto magni recusandae necessitatibus, quos autem natus aspernatur eos sapiente, cum excepturi tempora dolor ad vitae incidunt! Est recusandae ex distinctio dicta vitae pariatur, modi! Accusantium repellendus beatae consequatur, aspernatur labore deserunt velit magnam inventore adipisci nemo sint unde nam est veniam qui deleniti consectetur voluptates impedit excepturi cumque? Deleniti quidem voluptatum dolorum dignissimos consectetur quisquam doloremque ea, nam quis necessitatibus rerum. Consectetur dolor est excepturi vel possimus, maiores voluptatem, modi at nisi rerum, vitae sequi porro odit facilis. Mollitia tempora sit id totam fugit consectetur at neque amet autem, inventore pariatur ipsum soluta, obcaecati hic iste consequatur asperiores cumque tenetur. Consequuntur necessitatibus eaque dolorum voluptatem beatae, illo cum voluptate est, quos quibusdam nostrum asperiores provident sapiente! Exercitationem eveniet reiciendis harum ea voluptatum odio est veritatis nulla repudiandae, accusantium sit excepturi cupiditate molestiae alias recusandae obcaecati, quidem aperiam maxime minus cumque autem sequi esse perferendis! Facilis modi voluptate rem reiciendis, voluptatum, adipisci!</p>
+	
+
+
+
+	<script>
+
+	    $('.circle').click(function() {
+	      $('.box').addClass('sidebar');
+	      $('.ui-mask').addClass('ui-mask-visible');
+	    });
+	    $('.ui-mask').click(function() {
+	      $('.box').removeClass('sidebar');
+	      $('.ui-mask').removeClass('ui-mask-visible');
+	    });
+  
+	</script>
+</body>
+</html>

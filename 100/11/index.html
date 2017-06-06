@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #f5f5f5;
+		}
+		.clearfix:before,
+		.clearfix:after {
+    		content: " ";
+   	 		display: table;
+		}
+
+		.clearfix:after {
+   		 	clear: both;
+		}
+		.clearfix{
+    	*zoom: 1;
+    	}		
+		.box {
+			width: 800px;
+			border: 2px solid red;
+			margin: 0 auto;
+		}
+		.left{
+			width: 50px;
+			height: 100px;
+			background-color: teal;
+			float: left;
+		}
+		.right{
+			width: 750px;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="box clearfix">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>

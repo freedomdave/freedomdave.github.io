@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.big-box{
+			width: 300px;
+			height: 300px;
+			background-color: teal;
+		}
+		.small-box{
+			width: 100px;
+			height: 100px;
+			background-color: seagreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="big-box">
+		<div class="small-box"></div>
+	</div>
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<script>
+		// $(".big-box").mouseover(function() {
+		// console.log(1111);	
+		// });
+		// $(".big-box").mouseout(function() {
+		// console.log(222);	
+		// });
+		$(".big-box").mouseenter(function() {
+		console.log(333);	
+		});
+		$(".big-box").mouseleave(function() {
+		console.log(444);	
+		});
+
+
+	</script>
+</body>
+</html>
